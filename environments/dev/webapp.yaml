@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/seu-org/gitops-repo.git
+    repoURL: https://github.com/robsongomes/gitops-web-app.git
     targetRevision: main
     path: charts/webapp
     helm:
       valueFiles:
-        - ../../environments/dev/webapp-values.yaml
+        - ../../charts/webapp/values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
